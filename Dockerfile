@@ -1,5 +1,5 @@
 FROM rocker/shiny-verse:latest
-# system libraries of general use
+# System libraries of general use (This was produced automatically for me)
 RUN apt-get update && apt-get install -y \
     sudo \
     pandoc \
@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y \
     libxt-dev \
     libssl-dev \
     libssh2-1-dev
-# install R packages required
-# (change it dependeing on the packages you need)
+# Install R packages required
 RUN R -e "install.packages('shiny', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('shinydashboard', repos='http://cran.rstudio.com/')"
 RUN R -e "devtools::install_github('andrewsali/shinycssloaders')"
@@ -21,9 +20,10 @@ RUN R -e "install.packages('DT', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('plotly', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('igraph', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('networkD3', repos='http://cran.rstudio.com/')"
-# copy the app to the image
+# Copy the app to the image
 COPY SNABasicsShiny.Rproj /srv/shiny-server/
 COPY app.R /srv/shiny-server/
+
 # select port
 EXPOSE 3838
 # allow permission
