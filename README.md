@@ -1,5 +1,6 @@
 # SNA-shiny
 Introduction
+
 This Shiny app (on R) takes in example data from R about characters from a book to develop an SNA graph. The user has the ability to interact with the graph as well as change it through different inputs (The choosegroup input only works with "full" and 1 as inputs)
 
 Getting Started
