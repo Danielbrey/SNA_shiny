@@ -9,4 +9,5 @@ Getting Started
 4. Put all of the files in the same folder.
 
 Next Steps
+
 The main next step is to get this app (or any Shiny app) deployed onto Azure. We have tried multiple things, but have not found out a solution yet. The main tutorial we used to try deploying the app before is linked below. https://www.puresourcecode.com/programming-languages/r/deploying-dockerized-r-shiny-apps-on-microsoft-azure/ 
